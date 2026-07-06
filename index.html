@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Portfolio — Développeur Web</title>
+	<meta name="description" content="Portfolio de Cris — Développeur Web front-end / full-stack.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="brand">
+				<div class="logo"><a href="https://www.youtube.com/watch?v=jLhisAZVfrM">CS</a></div>
+				<div>
+					<div class="brand-name">Cris</div>
+					<div class="brand-subtitle">Développeur Web</div>
+				</div>
+			</div>
+			<nav>
+				<a href="#projets">Projets</a>
+				<a href="#competences">Compétences</a>
+				<a href="#a-propos">À propos</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div>
+				<h1>Bonjour, je suis Cris.</h1>
+				<p>Je conçois et développe des expériences web performantes et accessibles. J'aime transformer des idées en interfaces élégantes, rapides et maintenables.</p>
+				<a class="cta" href="#projets">Voir mes projets</a>
+
+				<div class="card card--spaced">
+					<strong>Compétences clés</strong>
+					<div class="skills" id="competences">
+						<span class="skill">HTML</span>
+						<span class="skill">CSS / Sass</span>
+						<span class="skill">JavaScript</span>
+						<span class="skill">React</span>
+						<span class="skill">Node.js</span>
+					</div>
+				</div>
+			</div>
+
+			<aside>
+				<div class="card">
+					<h3>Contact rapide</h3>
+					<p class="text-muted">Email: <a href="mailto:crissueur@gmail.com">crissueur@gmail.com</a></p>
+					<p class="text-muted">Localisation: Lyon, France</p>
+				</div>
+			</aside>
+		</section>
+
+		<section id="projets">
+			<h2 class="section-title">Projets récents</h2>
+			<div class="projects">
+				<a class="project" href="https://github.com/Frex6s/Kasa">
+					<h3>Projet Kasa</h3>
+					<p>Application web de location immobilière</p>
+                    <br>
+                    <span class="skill">React</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">CSS / Sass</span>
+                    <span class="skill">HTML</span>
+				</a>
+				<a class="project" href="#">
+					<h3>Projet B</h3>
+					<p>Résumé court du projet, techs utilisées et un résultat marquant.</p>
+				</a>
+				<a class="project" href="#">
+					<h3>Projet C</h3>
+					<p>Résumé court du projet, techs utilisées et un résultat marquant.</p>
+				</a>
+				<a class="project" href="#">
+					<h3>Projet ?</h3>
+					<p>En cours de développement...</p>
+				</a>
+			</div>
+		</section>
+
+		<section id="contact">
+			<h2>Contact</h2>
+			<div class="card card--small">
+				<form action="mailto:votre.email@example.com" method="post" enctype="text/plain">
+					<label class="form-label">Nom</label>
+					<input type="text" name="Nom" placeholder="Votre nom">
+					<label class="form-label">Message</label>
+					<textarea name="Message" rows="5"></textarea>
+					<div class="form-actions">
+						<button type="submit">Envoyer</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer>
+			© <span id="year"></span> Cris. Fais avec soin et quelque easter eggs.
+		</footer>
+	</div>
+
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
