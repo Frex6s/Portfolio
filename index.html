@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="project-modal.css">
 </head>
 <body>
 	<div class="container">
@@ -37,10 +38,9 @@
 				<div class="card card--spaced">
 					<strong>Compétences clés</strong>
 					<div class="skills" id="competences">
-						<span class="skill">HTML</span>
+						<span class="skill">React</span>
 						<span class="skill">CSS / Sass</span>
 						<span class="skill">JavaScript</span>
-						<span class="skill">React</span>
 						<span class="skill">Node.js</span>
 					</div>
 				</div>
@@ -58,52 +58,74 @@
 		<section id="projets">
 			<h2 class="section-title">Projets récents</h2>
 			<div class="projects">
-				<a class="project" href="https://github.com/Frex6s/Kasa">
+				<div class="project" tabindex="0"
+					data-title="Projet Kasa"
+					data-description="Application web de location immobilière, développée avec React. Navigation entre logements, galerie photo, collapses d'informations et gestion des routes dynamiques."
+					data-image="img/kasa.webp"
+					data-github="https://github.com/Frex6s/Kasa"
+					data-skills="React,JavaScript,CSS / Sass">
 					<h3>Projet Kasa</h3>
 					<p>Application web de location immobilière</p>
-                    <br>
-                    <span class="skill">React</span>
-                    <span class="skill">JavaScript</span>
-                    <span class="skill">CSS / Sass</span>
-                    <span class="skill">HTML</span>
-				</a>
-				<a class="project" href="#">
+					<br>
+					<span class="skill">React</span>
+					<span class="skill">JavaScript</span>
+					<span class="skill">CSS / Sass</span>
+				</div>
+				<div class="project" tabindex="0"
+					data-title="Projet B"
+					data-description="Résumé du projet B."
+					data-image="images/projet-b.jpg"
+					data-github="#"
+					data-skills="">
 					<h3>Projet B</h3>
-					<p>Résumé court du projet, techs utilisées et un résultat marquant.</p>
-				</a>
-				<a class="project" href="#">
+					<p>Résumé</p>
+				</div>
+				<div class="project" tabindex="0"
+					data-title="Projet C"
+					data-description="Résumé du projet C."
+					data-image="images/projet-c.jpg"
+					data-github="#"
+					data-skills="">
 					<h3>Projet C</h3>
-					<p>Résumé court du projet, techs utilisées et un résultat marquant.</p>
-				</a>
-				<a class="project" href="#">
+					<p>Résumé</p>
+				</div>
+				<div class="project" tabindex="0"
+					data-title="Projet ?"
+					data-description="En cours de développement..."
+					data-image="images/projet-a-venir.jpg"
+					data-github="#"
+					data-skills="">
 					<h3>Projet ?</h3>
 					<p>En cours de développement...</p>
-				</a>
+				</div>
 			</div>
 		</section>
 
-		<section id="contact">
-			<h2>Contact</h2>
-			<div class="card card--small">
-				<form action="mailto:votre.email@example.com" method="post" enctype="text/plain">
-					<label class="form-label">Nom</label>
-					<input type="text" name="Nom" placeholder="Votre nom">
-					<label class="form-label">Message</label>
-					<textarea name="Message" rows="5"></textarea>
-					<div class="form-actions">
-						<button type="submit">Envoyer</button>
-					</div>
-				</form>
-			</div>
-		</section>
-
+	<section id="contact">
+    <h2>Contact</h2>
+    <div class="card card--small">
+        <form id="contact-form">
+            <label class="form-label">Nom</label>
+            <input type="text" name="Nom" placeholder="Votre nom" required>
+ 
+            <label class="form-label">Message</label>
+            <textarea name="Message" rows="5" required></textarea>
+ 
+            <div class="form-actions">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+        <p id="form-status"></p>
+    </div>
+</section>
 		<footer>
 			© <span id="year"></span> Cris. Fais avec soin et quelque easter eggs.
 		</footer>
 	</div>
 
-	<script>
-		document.getElementById('year').textContent = new Date().getFullYear();
-	</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+<script src="modal.js"></script>
 </body>
 </html>

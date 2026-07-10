@@ -320,6 +320,10 @@ button[type="submit"]:hover {
   font-size: 1.9rem;
 }
 
+.project {
+	cursor: pointer;
+}
+
 @media (max-width: 900px) {
   header {
     flex-direction: column;
