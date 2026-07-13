@@ -26,4 +26,10 @@ form.addEventListener("submit", function (e) {
         }
     );
 });
- 
+
+console.log("        --.__.--")
+console.log("     ___\\(0_0)/")
+console.log("  ~~/     (OO)")
+console.log("    \\  __  /")
+console.log("snd  `='`='=")
+console.log("Qu'est ce que tu fais là ?")
