@@ -35,10 +35,15 @@
 	line-height: 1;
 	cursor: pointer;
 	color: #666;
+	transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .modal-close:hover {
 	color: #000;
+}
+
+.modal-close:active {
+	transform: scale(0.95);
 }
 
 .modal-image {
@@ -53,4 +58,24 @@
 	flex-wrap: wrap;
 	gap: 8px;
 	margin: 16px 0;
+}
+
+@media (max-width: 720px) {
+	.modal {
+		max-width: 500px;
+		padding: 24px;
+	}
+}
+
+@media (max-width: 520px) {
+	.modal {
+		max-width: 100%;
+		margin: 0 12px;
+		padding: 18px;
+	}
+
+	.modal-close {
+		top: 10px;
+		right: 12px;
+	}
 }

@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="project-modal.css">
 </head>
 <body>
+	<div id="f1-cursor" aria-hidden="true">🏎️</div>
+	<button id="f1-toggle" type="button">🏎️ ON</button>
 	<div class="container">
 		<header>
 			<div class="brand">
@@ -24,15 +26,15 @@
 			<nav>
 				<a href="#competences">Compétences</a>
 				<a href="#projets">Projets</a>
-				<a href="#contact">Contact</a>
 				<a href="#Parcours">Parcours</a>
+				<a href="#contact">Contact</a>
 			</nav>
 		</header>
 
 		<section class="hero">
 			<div>
 				<h1>Bonjour, je suis Cris.</h1>
-				<p>Je conçois et développe des expériences web performantes et accessibles. J'aime transformer des idées en interfaces élégantes, rapides et maintenables.</p>
+				<p class="intro">Je conçois et développe des expériences web performantes et accessibles. J'aime transformer des idées en interfaces élégantes, rapides et maintenables.</p>
 				<a class="cta" href="#projets">Voir mes projets</a>
 
 				<div class="card card--spaced">
@@ -85,18 +87,18 @@
 					<span class="skill">Express</span>
 				</div>
 				<div class="project" tabindex="0"
-					data-title="Projet C"
-					data-description="Résumé du projet C."
-					data-image="images/projet-c.jpg"
+					data-title="Projet Portfolio"
+					data-description="Portfolio personnel présentant mes compétences, mes projets et un formulaire de contact, réalisé avec HTML, CSS et JavaScript pour une navigation fluide et responsive."
 					data-github="#"
-					data-skills="">
-					<h3>Projet C</h3>
-					<p>Résumé</p>
+					data-skills="JavaScript,HTML,CSS">
+					<h3>Projet Portfolio</h3>
+					<p>Portfolio personnel responsive réalisé avec JavaScript et CSS.</p>
+					<span class="skill">JavaScript</span>
+					<span class="skill">CSS / Sass</span>
 				</div>
 				<div class="project" tabindex="0"
 					data-title="Projet ?"
 					data-description="En cours de développement..."
-					data-image="images/projet-a-venir.jpg"
 					data-github="#"
 					data-skills="">
 					<h3>Projet ?</h3>
@@ -109,28 +111,31 @@
 		<h2 class="section-title">Parcours</h2>
 		<div class="timeline">
 			<article class="timeline-item">
-				<div class="timeline-year">2025</div>
-				<div class="timeline-content">
-					<h3>Bac STI2D</h3>
-					<p>Obtention du baccalauréat STI2D, une base solide pour mes compétences techniques en développement.</p>
-				</div>
-			</article>
-			<article class="timeline-item">
 				<div class="timeline-year">2026</div>
 				<div class="timeline-content">
 					<h3>Formation OpenClassrooms</h3>
 					<p>Formation en développement web pour renforcer mes connaissances en front-end, JavaScript et bonnes pratiques.</p>
 				</div>
 			</article>
+			<article class="timeline-item">
+				<div class="timeline-year">2025</div>
+				<div class="timeline-content">
+					<h3>Bac STI2D</h3>
+					<p>Obtention du baccalauréat STI2D, une base solide pour mes compétences techniques en développement.</p>
+				</div>
+			</article>
 		</div>
 	</section>
-	
+	<!-- Tu cherches un peu trop a mon gout -->
 	<section id="contact">
     <h2>Contact</h2>
     <div class="card card--small">
         <form id="contact-form">
             <label class="form-label">Nom</label>
             <input type="text" name="Nom" placeholder="Votre nom" required>
+ 
+            <label class="form-label">Email</label>
+            <input type="email" name="Email" placeholder="Votre email" required>
  
             <label class="form-label">Message</label>
             <textarea name="Message" rows="5" required></textarea>
@@ -148,7 +153,6 @@
 	</div>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="script.js"></script>
 <script src="modal.js"></script>
 </body>
